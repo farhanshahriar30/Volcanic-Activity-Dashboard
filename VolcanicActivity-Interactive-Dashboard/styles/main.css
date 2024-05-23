@@ -1,0 +1,362 @@
+Base styles body,
+html {
+    height: 100%; /* seeting height and width for body and html*/
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    margin: 0; /* removing the default margin*/
+    padding: 0; /* removing the default padding*/
+    background: #0a0f0d; /* setting dark background color*/
+    background-size: cover; /* insuring that background image cover all element*/
+    display: flex; /* setting diplay to flex in order for flexbox layout*/
+    flex-direction: column; /* setting to column for vertically adjustment*/
+    justify-content: flex-start; /* setting flex item at first*/
+    color: white; /* creating contrats to background*/
+    font-family: 'Times New Roman', sans-serif; /* setting default font*/
+}
+
+body{
+    width: 1470px;
+}
+
+img {
+    display: block; /* setting display to block*/
+    width: 100%; /* setting with to 100% to cover the entire page*/
+    height: auto; /* setting adjustable height*/
+    z-index: -1; /* Place the image below other content */
+ 
+}
+
+.grid-container {
+    position: absolute; /* setting position*/ 
+    display: grid; /* display grid for container element*/
+    grid-template-rows: auto auto; /* Creates two row where each sized according to its content */
+    z-index: -1; /* Place the image below other content */
+  }
+
+/* Title styles */
+#title-container {
+    text-align: center; 
+    font-size: x-large;
+    color:#00a9ff;
+    text-underline-position: below;
+    margin: 20px 0;
+}
+
+ 
+/* Chart container general styles */
+.chart-container {
+    width: 90%; 
+    max-width: 1200px;
+    margin: 80px auto;
+    background-color: transparent;
+}
+ 
+/* World Map Container */
+#world-map-container {
+    width: 600;
+    height: 850px;
+    position: relative;
+    padding-left: 250px;
+    padding-right: 250px;
+}
+#choro-map-container {
+    height: 500px;
+    position: relative;
+}
+
+/* Eruption Timeline Container */
+#eruption-timeline-container {
+    height: 800px;
+    position: relative;
+    padding-left: 250px;
+}
+
+/* Bubble Chart Container */
+#bubble-chart {
+    height: 500px;
+    position: relative;
+    padding: 100px;
+    padding-top: 200px;
+}
+
+/* Histogram Container */
+#histogram {
+    height: 500px;
+    position: relative;
+    padding-left: 150px;
+}
+
+/* Pie Chart Container */
+#pie-chart {
+    height: 500px;
+    position: relative;
+    padding-left: 150px;
+}
+
+/* SVG element styles */
+svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+ 
+/* Axis styles */
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #fff;
+}
+/* Axis text style*/
+.axis text {
+    fill: #fff;
+    font-size: 12px;
+}
+/* Axis label style*/
+.axis-label {
+    fill: #fff;
+    font-size: 16px;
+    text-anchor: middle;
+}
+ 
+/* Line and area path styles */
+.line-path {
+    stroke: steelblue;
+    stroke-width: 2;
+}
+/* inside Line and area path style*/ 
+.area-path {
+    fill: steelblue;
+    opacity: 0.3;
+}
+ 
+/* Tooltip styles used for charts*/
+.tooltip,
+.timeline-tooltip,
+.tooltip_chart {
+    position: absolute;
+    text-align: center;
+    padding: 6px;
+    background: rgba(50, 50, 50, 0.9);
+    color: #fff;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+ 
+/* Bar and bubble styles */
+.bar,
+.bubble {
+    fill-opacity: 0.6;
+    stroke: black;
+    stroke-width: 1px;
+    
+}
+ 
+/* Adjustments for responsive layouts could be added here if necessary */
+@media (max-width: 768px) {
+    /* Responsive styles for mobile devices can be added below */
+}
+  /* style bar for bar chart*/
+  .bar {
+    fill: steelblue;
+  }
+  /* change color*/
+  .bar:hover {
+    fill: rgb(255, 255, 255);
+  }
+   
+  .tooltip {
+    position: absolute; /* allow precise control over tooltip style*/
+    text-align: center; /* centering text*/
+    width: auto; /* automatically width adjustment */
+    padding: 10px; /* adding space*/
+    font-size: 14px; /* setting font size*/
+    background: black; /* setting backgournd color*/
+    color: white; /* setting text color*/
+    border-radius: 4px; /* adding round cover*/
+    pointer-events: none; /* not allowing any interefering by tooltip*/
+  }
+   
+  #slider-container ,#populationSelect {
+    display: flex; /* using flexbox layout*/
+    justify-content: center; /* centering flex item horizontally*/
+    margin-top: 10px; /* adding space*/
+  }
+  #populationSelect{
+    margin-top: 20px; /* adding space*/
+  }
+
+
+  .colcontainer {
+    display: flex; /* enables flexbox layout for arranging */ 
+  }
+
+  .column {
+    flex: 1; /* each columns take equal space*/
+    height: 600px; /* seeting height*/ 
+  }
+
+  .colscontainer {
+    display: flex; /* enable flexbox layout*/
+  }
+
+  .columns{
+    flex: 1; /* each columns take equal space*/
+    height: 600px; /* seeting height*/ 
+  }
+
+  .select-container {
+    position: relative; /* allowing all four direction alligment adjustment*/
+    width: 210px; /* setting width*/
+    border-radius: 10px; /* setting round border*/
+    background: #3498db; /* setting background color*/
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* adding shadow*/
+  }
+  
+  .select-container select {
+    width: 100%; /* seeting the width to full page*/
+    background: transparent; /* Make the background transparent */
+    color: white; /* Text color */
+    padding: 10px; /* adding padding*/
+    border: none; /* Remove border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: none; /* Remove default box shadow in some browsers */
+    cursor: pointer; /* Change mouse pointer */
+    font-size: 16px; /* Text size */
+  }
+  
+  .select-container:after {
+    font-family: 'Font Awesome 5 Free'; /* setting font*/
+    font-weight: 900; /* setting font size*/
+    position: absolute; /* serring position for font*/
+    top: 50%; /* center vertically*/
+    right: 15px; /* position of right*/
+    transform: translateY(-50%); /* position in center*/
+    pointer-events: none; /* not allowing any interefering by tooltip*/
+  }
+  
+
+  .select-container select option {
+    background: #3498db; /* setting background color*/
+    color: white; /* seeting text color*/
+  }
+  
+body.light-mode {
+    background-color: #ffffff; /* setting background color*/
+    color: #000000; /* seeting text color*/
+    z-index: -1; /* Place the lightmode style behind other content */
+}
+ 
+.theme-switch-wrapper {
+    display: flex; /* use flexbox for layout*/
+    align-items: center; /* center vertically*/
+    justify-content: center; /* center horizontally*/
+    margin: 20px; /* ading space*/
+}
+ 
+.theme-switch {
+    display: inline-block; /* display element in blocked inline*/
+    height: 34px; /* setting height*/ 
+    position: relative; /* positioning related to original position*/
+    width: 60px; /* setting width*/
+}
+ 
+.theme-switch input {
+    display:none; /* hide actuall input visibility*/
+}
+ 
+.slider {
+    background-color: #ccc; /* setting background color*/
+    bottom: 0; /* inserting bottom positioning*/
+    cursor: pointer; /* changing cursor*/
+    left: 0; /* inserting left positioning*/
+    position: absolute; /* setting position*/
+    right: 0;/* inserting right positioning*/
+    top: 0; /* inserting top positioning*/
+    transition: .4s; /* adding transition animation effect*/ 
+}
+ 
+.slider:before {
+    background-color: #fff;/* setting background color*/
+    bottom: 4px;/* inserting bottom positioning*/
+    content: ""; 
+    height: 26px;/* setting height*/ 
+    left: 4px;/* inserting left positioning*/
+    position: absolute; /* setting position*/
+    transition: .4s;/* adding transition animation effect*/
+    width: 26px;/* setting width*/
+}
+ 
+input:checked + .slider {
+    background-color: #66bb6a;/* setting background color*/
+}
+ 
+input:checked + .slider:before {
+    transform: translateX(26px); /* moving slider when its clicked*/
+}
+ 
+.slider.round {
+    border-radius: 34px; /* making slider rounded*/
+}
+ 
+.slider.round:before {
+    border-radius: 50%; /* ensuring that slider is rounded */
+}
+/* adding style to interactive element for table, scrollbar, and countries*/
+.country { stroke: #000000; stroke-width: 0.5; }
+
+.volcano-table tbody {
+    display: block; /* display element in blocked row*/
+    max-height: 200px;  /* setting height ti its maximum*/
+    overflow-y: auto; /* setting vertically direction automatically */
+}
+
+.volcano-table thead, .volcano-table tbody tr {
+    display: table; /* setting element as in boxes*/
+    width: 100%; /* setting width to full page*/
+    table-layout: fixed; /* seeting table layput to fixed or auto*/
+}
+
+.volcano-table {
+    width: 100%;/* setting width to full page*/
+    border-collapse: collapse; /* setting border as in separated*/
+}
+
+.table-header, .table-cell {
+    padding: 8px; /* adding space*/
+    border: 1px solid #00a9ff; /* adding border*/
+}
+
+.table-header {
+    background-color: #00a9ff; /* adding background color*/
+    color: #FFFFFF; /*setting text color*/
+    text-align: left; /* setting text alligmnet*/
+}
+
+.table-cell {
+    text-align: left;/* setting text alligmnet*/
+}
+
+
+.volcano-table tbody::-webkit-scrollbar {
+    width: 10px; /* setting width*/
+}
+
+.volcano-table tbody::-webkit-scrollbar-thumb {
+    background: #00a9ff; /* adding background color*/
+    border-radius: 5px; /* setting rounded border*/
+}
+
+#play-pause-button {
+    position: absolute; /* setting position*/
+    top: 200px; /* inserting top positioning*/
+    right: 250px; /* inserting right positioning*/
+    padding: 10px 20px; /* adding space*/
+    background-color: #189BCC; /* setting background color*/
+    color: #fff; /* Setting text color */
+    border: none; /* Removes the default border */
+    border-radius: 5px; /* setting rounded border*/
+    cursor: pointer; /* Changing cursor  */
+    z-index: 10; /* Ensures the button is placed above other elements */
+} 
